@@ -47,7 +47,7 @@ cacheTiming:
     ; Ce sont des hints, pas des ordres : le CPU n'est pas obligé de les respecter.
     ;    Si la donnée est déjà en cache, l'accès sera plus rapide (via rdtscp on peut le mesurer).
     
-    ; ici on va mesurer les cycles CPU fait pour charger ces addr dans le cache CPU
+    ; ici on va mesurer les cycles CPU fait pour charger ces addr dans le cache CPU, car si l'addr est déjà dans le cache il va skip l'instrcuion et être plus rapide 
 	prefetchnta byte [r10]
 	prefetcht2 byte [r10]
 
